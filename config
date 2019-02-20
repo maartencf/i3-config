@@ -108,11 +108,12 @@ set $ws10 "10"
 
 # Start Applications
 #bindsym $mod+F1 workspace $ws1; exec qterminal
-bindsym $mod+å workspace $ws1; exec qterminal
-bindsym $mod+æ workspace $ws3; exec firefox 
+bindsym $mod+u workspace $ws1; exec qterminal
+bindsym $mod+i workspace $ws3; exec firefox 
 #; $mod+f #look at this...
-bindsym $mod+ø exec pcmanfm-qt
-bindsym $mod+' workspace $ws5; exec vlc
+#bindsym $mod+ø exec pcmanfm-qt
+bindsym $mod+o exec pcmanfm-qt
+bindsym $mod+p workspace $ws5; exec vlc
 #bindsym $mod+F3 exec ranger
 #bindsym $mod+F6 exec ...
 #
