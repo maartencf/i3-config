@@ -30,7 +30,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec qterminal #lxterminal
+bindsym $mod+Return exec lxterminal
+#bindsym $mod+Return exec qterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -108,12 +109,15 @@ set $ws10 "10"
 
 # Start Applications
 #bindsym $mod+F1 workspace $ws1; exec qterminal
-bindsym $mod+u workspace $ws1; exec qterminal
+#bindsym $mod+y workspace $ws1; exec qterminal
+bindsym $mod+y workspace $ws1; exec lxterminal
+bindsym $mod+u workspace $ws2; exec chromium-browser   #qtalarm
 bindsym $mod+i workspace $ws3; exec firefox 
 #; $mod+f #look at this...
 #bindsym $mod+ø exec pcmanfm-qt
-bindsym $mod+o exec pcmanfm-qt
-bindsym $mod+p workspace $ws5; exec vlc
+#bindsym $mod+o exec pcmanfm-qt
+bindsym $mod+o exec pcmanfm
+bindsym $mod+p workspace $ws3; exec vlc
 #bindsym $mod+F3 exec ranger
 #bindsym $mod+F6 exec ...
 #
@@ -160,6 +164,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 
 assign [class="Evince"] 4
+#assign [class="Vscodium"] 2
+#assign [class="VScodium"] 2
+assign [class="VSCodium"] 2
 #assign [class="feh"] 5
 #assign [class="lximage-qt"] 5
 
@@ -201,9 +208,15 @@ for_window [class="(?i)virtualbox"] floating enable #border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Alarm-clock"] floating enable
 for_window [class="Gpicview"] floating enable
+for_window [class="Cheese"] floating enable
+for_window [class="Brasero"] floating enable
+for_window [class="Gimp"] floating enable
 
-#launche at start up
+
+#launch at start up
 exec_always --no-startup-id numlockx on
+exec_always --no-startup-id xscreensaver -nosplash
+#exec --no-startup-id xscreensaver
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
